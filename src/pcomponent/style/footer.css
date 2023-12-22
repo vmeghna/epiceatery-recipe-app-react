@@ -1,0 +1,30 @@
+.footer {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-gap: 1em;
+  background-color: #0f0f0f;
+  color: #fff;
+  padding: 3em;
+}
+.mm {
+  padding-right: 5rem;
+}
+.footer-section .title {
+  opacity: 1;
+  font-weight: bold;
+  margin-bottom: 1em;
+  color: #fff;
+  font-size: 1.1em;
+}
+.footer-section p {
+  opacity: 0.9;
+  margin-bottom: 0.5em;
+}
+.flink {
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .mm {
+    padding-right: 0;
+  }
+}

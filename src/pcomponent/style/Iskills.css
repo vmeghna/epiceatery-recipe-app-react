@@ -1,0 +1,52 @@
+.img {
+  border-radius: 10px;
+  overflow: hidden;
+}
+.img img {
+  width: 100%;
+}
+.improve .space {
+  padding-left: 3em;
+}
+.improve .skill-item {
+  border-left: 6px solid var(--primary-color);
+  margin-bottom: 10px;
+  padding: 0.1em 0 0.1em 8px;
+  color: var(--text-light);
+  font-weight: bold;
+  transform: translateX(100%);
+  animation: 0.3s slideRight forwards;
+}
+
+.improve .skill-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.improve .skill-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.improve .skill-item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.improve .skill-item:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.improve .skill-item:nth-child(6) {
+  animation-delay: 0.6s;
+}
+@keyframes slideRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.improve .title {
+  font-size: 3em;
+}
+.improve .btn {
+  margin-top: 15px;
+}

@@ -1,0 +1,100 @@
+.section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5vw;
+}
+.col {
+  width: 50%;
+}
+.col .space {
+  padding-right: 1em;
+}
+.title {
+  color: var(--text-color);
+  font-size: 5em;
+  margin-bottom: 0.25em;
+}
+.space .description {
+  color: var(--text-light);
+  font-size: 1.25em;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  margin-bottom: 1.5em;
+  padding-right: 30px;
+}
+.btn a {
+  color: #fff;
+}
+.btn {
+  border: 0;
+  outline: 0;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 10px 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px var(--shadow-color);
+  font-size: 20px;
+  cursor: pointer;
+}
+.btn:hover {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+.hero .gallery {
+  display: grid;
+  gap: 1.75vw;
+  grid-template-columns: repeat(3, 1fr);
+}
+.cimages {
+  border-radius: 3px;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  position: relative;
+  box-shadow: 1px 2px 6px var(--shadow-color);
+  transform: scale(0);
+  opacity: 0;
+  animation: 0.5s popOut forwards;
+}
+.cimages:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.cimages:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.cimages:nth-child(6) {
+  animation-delay: 0.3s;
+}
+.cimages:nth-child(9) {
+  animation-delay: 0.4s;
+}
+.cimages:nth-child(8) {
+  animation-delay: 0.5s;
+}
+.cimages:nth-child(7) {
+  animation-delay: 0.6s;
+}
+.cimages:nth-child(4) {
+  animation-delay: 0.7s;
+}
+.cimages:nth-child(5) {
+  animation-delay: 0.8s;
+}
+@keyframes popOut {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.cimages img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

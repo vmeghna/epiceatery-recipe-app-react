@@ -1,0 +1,21 @@
+.message {
+  display: block;
+  margin-inline: 2vw;
+}
+.message .message-text {
+  font-size: 1.3em;
+  line-height: 1.3;
+  display: block;
+  padding-inline: 2vw;
+  color: var(--text-color);
+}
+.message .message-author {
+  color: var(--text-light);
+  text-align: right;
+  margin-top: 1em;
+}
+.message svg {
+  color: var(--primary-color);
+  font-size: 1.5em;
+  margin-right: 0.5em;
+}

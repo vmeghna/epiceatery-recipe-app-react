@@ -1,0 +1,71 @@
+.chiefs {
+  display: block;
+}
+.chiefs .chiefs-box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1.75em;
+}
+.chief-box {
+  display: flex;
+  height: 130px;
+  background-color: var(--background-color);
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 5px 8px var(--shadow-color);
+  transition: 0.2s;
+}
+.chief-box:hover {
+  transform: scale(1.1);
+}
+.chief-box img {
+  height: 100%;
+  width: 120px;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px var(--shadow-color);
+}
+.cheif-info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  padding-top: 0.5em;
+}
+.chief-name {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--text-color);
+}
+.chief-recipe-count,
+.chief-cuisine {
+  font-size: 1.2em;
+  color: var(--text-light);
+}
+.chief-icon {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+.chief-icon svg {
+  margin-right: 0.5em;
+  cursor: pointer;
+}
+.chief-icon svg:nth-child(1) {
+  color: #0063f7;
+}
+.chief-icon svg:nth-child(2) {
+  color: #13b4ff;
+}
+.chief-icon svg:nth-child(3) {
+  color: #ff0056;
+}
+@media (max-width: 768px) {
+  .chiefs .title {
+    font-size: 45px;
+    text-align: center;
+  }
+  .chief-box {
+    box-shadow: 0 5px 10px var(--shadow-color);
+  }
+}

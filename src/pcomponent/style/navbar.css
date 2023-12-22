@@ -1,0 +1,86 @@
+/* =============== navbar ======================= */
+.navbar {
+  height: 55px;
+  box-shadow: 0 3px 6px var(--shadow-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-shadow: 0 1px 3px var(--shadow-color);
+  color: var(--primary-color);
+}
+.logo span {
+  color: var(--text-color);
+}
+.nav-links a {
+  margin-left: 1em;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+.nav-links a::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  background-color: var(--primary-color);
+  height: 5px;
+  width: 0;
+  bottom: -8px;
+  border-radius: 12px;
+  transition: all 0.2s ease-in-out;
+}
+.nav-links a:hover::before {
+  width: 100%;
+}
+
+.Out {
+  border: 0;
+  outline: 0;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 10px 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px var(--shadow-color);
+  font-size: 20px;
+  cursor: pointer;
+}
+.Out:hover {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+/* ============== Smenu scroll btn ================================== */
+.sidebar-btn {
+  height: 27px;
+  width: 32px;
+  position: relative;
+  display: none;
+}
+.bar {
+  height: 6px;
+  width: 100%;
+  background-color: var(--text-color);
+  position: absolute;
+  cursor: pointer;
+}
+.bar:nth-child(1) {
+  top: 0;
+}
+.bar:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.bar:nth-child(3) {
+  top: 100%;
+  transform: translateY(-100%);
+}
+.sidebar-btn .active {
+  height: 40px;
+}
