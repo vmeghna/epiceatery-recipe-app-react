@@ -7,6 +7,7 @@ import {
   createUserDocumentFromAuth,
   signInAuthUserWithEmailAndPassword,
 } from "./../utils/firebase.jsx";
+import { AiFillDownCircle } from "react-icons/ai";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -28,6 +29,7 @@ const Login = () => {
   } = useUser();
 
   const { username, email, password, cpassword } = formFields;
+  const [isTestBtn, setIsTestBtn] = useState(false);
 
   // const [email, setEmail] = useState("");
   // const [password, setPassword] = useState("");
@@ -96,6 +98,30 @@ const Login = () => {
           <button value="submit" className="btn">
             Login
           </button>
+          <div>
+            <button
+              type="submit"
+              className="btn"
+              onClick={() => setIsTestBtn(!isTestBtn)}
+            >
+              view test credentials
+              <span className="connect-icon">
+                <AiFillDownCircle />
+              </span>
+            </button>
+            {isTestBtn && (
+              <div className="testCredentials">
+                <div>
+                  <h5>Email :</h5>
+                  <p>epiceatery@gmail.com</p>
+                </div>
+                <div>
+                  <h5>Password :</h5>
+                  <p>Epiceatery@5</p>
+                </div>
+              </div>
+            )}
+          </div>
         </form>
         {/* <label className="label">Continue with Google</label> */}
         <button

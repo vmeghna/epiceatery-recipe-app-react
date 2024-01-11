@@ -1,4 +1,6 @@
 import "./style/footer.css";
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <div className="footer container">
@@ -17,15 +19,26 @@ const Footer = () => {
       </div>
       <div className="footer-section">
         <p className="title">Contact Us</p>
-        <p>info@epiceatery.com</p>
+        <Link to="/home">
+          <p>info@epiceatery.com</p>
+        </Link>
         <p>coimbatore</p>
       </div>
       <div className="footer-section">
         <p className="title">Socials</p>
-        <p className="flink">Linkedin</p>
-        <p className="flink">Facebook</p>
-        <p className="flink">Instagram</p>
-        <p className="flink">Twitter</p>
+        <Link to="/home">
+          <p className="flink">Linkedin</p>
+        </Link>
+
+        <Link to="/home">
+          <p className="flink">Facebook</p>
+        </Link>
+        <Link to="/home">
+          <p className="flink">Instagram</p>
+        </Link>
+        <Link to="/home">
+          <p className="flink">Twitter</p>
+        </Link>
       </div>
     </div>
   );

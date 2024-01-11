@@ -28,6 +28,10 @@ const SignUp = () => {
 
   const navigate = useNavigate();
 
+  /*profile*/
+
+  /*profile*/
+
   const submitHandler = async (e) => {
     e.preventDefault();
     if (password !== cpassword) {

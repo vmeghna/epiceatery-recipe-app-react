@@ -9,6 +9,7 @@
 .mm {
   padding-right: 5rem;
 }
+
 .footer-section .title {
   opacity: 1;
   font-weight: bold;
@@ -19,9 +20,12 @@
 .footer-section p {
   opacity: 0.9;
   margin-bottom: 0.5em;
+  cursor: pointer;
+  color: white;
 }
 .flink {
   cursor: pointer;
+  color: white;
 }
 @media (max-width: 768px) {
   .mm {
