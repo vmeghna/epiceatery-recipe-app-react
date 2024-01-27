@@ -7,6 +7,7 @@ import {
   createAuthUserWithEmailAndPassword,
 } from "../utils/firebase.jsx";
 import { Link, useNavigate } from "react-router-dom";
+import { ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
 
 const SignUp = () => {
   const {
@@ -18,7 +19,7 @@ const SignUp = () => {
     setPassword,
     setCpassword,
   } = useUser();
-
+  const [file, setFile] = useState(null);
   const { username, email, password, cpassword } = formFields;
 
   const changeHandler = (e) => {
@@ -87,6 +88,7 @@ const SignUp = () => {
               required
               onChange={changeHandler}
             />
+
             <label htmlFor="password"></label>
             <input
               type="password"
@@ -107,6 +109,9 @@ const SignUp = () => {
               required
               onChange={changeHandler}
             />
+            <label className="input">
+              <input type="file" onChange={(e) => setFile(e.target.files[0])} />
+            </label>
           </div>
           {/* ))} */}
           <button type="submit" className="btn">

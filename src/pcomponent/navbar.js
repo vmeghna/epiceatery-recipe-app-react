@@ -45,6 +45,11 @@ const Navbar = () => {
           name: "Logout",
           onClick: handleLogout,
         },
+        {
+          name: "profile",
+          path: "/login",
+          icon: faSignIn,
+        },
       ]
     : [
         {
